@@ -1,7 +1,10 @@
 # Concepts Covered In React
 
- 1.display the password to the user without sending data to back-end (DOM)
- 2.chat message using state& sub-componets
+ 1. display the password to the user without sending data to back-end (DOM)
+ 2. chat message using state& sub-componets
+ 3. couter for adding and removing the number
+ 4. To-DO List
+ 5. (if possible also theme switch( light to dark)
 
 
 
