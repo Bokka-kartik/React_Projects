@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="m">Do Not Display</h1>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+    <script type="text/babel">
+
+        function Checking() {
+            let [counter, setcounter] = React.useState(0);
+
+            function changing(e) {
+
+                // { e.target.innerText==="+" && setcounter(counter+1)}
+                // {e.target.innerText==="-" && setcounter(counter-1)}
+                if(e.target.innerText==="-"){
+                   setcounter(counter-1);
+                   document.getElementById('text').style.color='red';
+                   
+
+            }
+                if(e.target.innerText==="+"){
+                    setcounter(counter + 1);
+                    
+                   document.getElementById('text').style.color='green';
+                }
+        }
+
+            return (<>
+                <button id='pos'  onClick={changing} style={{fontSize:'40px'}}>+</button>
+                <h1  id='text'style={{color:'none'}}>{counter}</h1>
+                <button id='neg' onClick={changing} style={{fontSize:'40px'}}>-</button>
+            </>)
+        }
+
+        function Counter() {
+            return (<div align='center' style={{border:'black solid 2px'}}>
+                <Checking />
+            </div>)
+        }
+        ReactDOM.createRoot(document.getElementById("m")).render(<Counter />)
+    </script>
+</body>
+
+</html>
