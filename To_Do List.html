@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="hi">Must Not Display</h1>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- must be add cuz the react depends on this files/library-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function Data({ total, settotal }) {
+
+            // let [list,setlist]=React.useState([]);
+            let [current, setcurrent] = React.useState('');
+
+
+            function AddList(e) {
+                let hm = e.target.value;
+                setcurrent(hm);
+            }
+
+            function Add() {
+                if (current.trim() === '') return;
+                settotal([...total, current]);
+                setcurrent('');
+            }
+    
+
+            return (<>
+                <input type="text" placeholder="Enter the things you want to do" size='40' value={current} onChange={AddList} /><br />
+                <button type="submit" onClick={Add}>click me </button>
+            </>
+            )
+
+        }
+
+        function See({ total }) {
+            return (
+                total.map((val, index) => {
+                    return (<><h1 key={index}>{val}</h1></>)
+                }))
+        }
+
+        function List() {
+
+            let [total, settotal] = React.useState([]);
+            return (
+                <div align="center">
+                    <Data total={total} settotal={settotal} />
+                    <See total={total} />
+                </div>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('hi')).render(<List />)
+    </script>
+
+</body>
+
+</html>
