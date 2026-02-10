@@ -41,3 +41,11 @@
  - React Functional Components
  - useState Hook implementation
  - Event handling using onClick
+
+# Mini_project 3
+  To add data to a list and displaying it on the UI using event handlers 
+
+ ##  Features 
+ - Add tasks dynamically
+ - Controlled input field
+ - Component-based structure
