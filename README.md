@@ -49,3 +49,32 @@
  - Add tasks dynamically
  - Controlled input field
  - Component-based structure
+
+# Mini_project 4
+
+# Mini_Project 5
+  redux helps in making better sharing of props and overcome the props drilling 
+
+  ## Project Structure 
+   -index.html
+   |
+   |-src
+      |-app.js
+      |
+      |-Components 
+      |  |-Counter.jsx
+      |
+      |-Store
+      |  |-store.js
+      |
+      |-Functions
+      |  |-counterSlice.js
+
+   ## Instructions to follow to make sure everything works fine 
+   - install react-redux & @reduxjs/toolkit react-redux library to utilize configure store
+   - segregate the folder appropriatly as of Components and Funtionality in separate folder
+
+   ## Features 
+   - centralize storing location for funtionality of reusable code
+   - consistence share of resources among the subComponents  
+      
