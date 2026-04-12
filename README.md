@@ -5,6 +5,7 @@
  3. chat message using state& sub-componets
  4. To-DO List
  5. (if possible also theme switch( light to dark)
+ 6. ContextApi using UseReducers
 
 
 
@@ -55,26 +56,20 @@
 # Mini_Project 5
   redux helps in making better sharing of props and overcome the props drilling 
 
-  ## Project Structure 
-   -index.html
-   |
-   |-src
-      |-app.js
-      |
-      |-Components 
-      |  |-Counter.jsx
-      |
-      |-Store
-      |  |-store.js
-      |
-      |-Functions
-      |  |-counterSlice.js
-
    ## Instructions to follow to make sure everything works fine 
    - install react-redux & @reduxjs/toolkit react-redux library to utilize configure store
    - segregate the folder appropriatly as of Components and Funtionality in separate folder
 
    ## Features 
    - centralize storing location for funtionality of reusable code
-   - consistence share of resources among the subComponents  
+   - consistence share of resources among the subComponents
+
+# Mini_project 5
+ - trying to overcome the over utilization of redux for small applications
+ - just building a storage and using those hooks(ie usereducer to handle the functionality)
+ - also wrapping the store to a buffer componet and passing subcomponents inside it
+ -  
+  ## Features 
+  - centralize storing location for funtionality of reusable code
+  - 
       
